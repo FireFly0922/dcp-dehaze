@@ -19,12 +19,14 @@
 
 '''bash
 git clone https://github.com/FireFly0922/dcp-dehaze.git
-cd dcp-dehaze  
+cd dcp-dehaze
+'''
 
 ### 2）拉取Docker镜像  
 
 '''bash
-sudo docker pull firefly0922/dcp-dehaze:latest  
+sudo docker pull firefly0922/dcp-dehaze:latest
+'''
 
 ### 3）运行去雾  
 
@@ -32,7 +34,8 @@ sudo docker pull firefly0922/dcp-dehaze:latest
 sudo docker run --rm -it \
   -v "$PWD":/data \
   firefly0922/dcp-dehaze:r35.5.0-v1 \
-  "/data/薄雾图.png" "/data/out.png"  
+  "/data/薄雾图.png" "/data/out.png"
+'''
 
 运行成功后，你会在当前目录得到 out.png，终端会输出类似：  
 去雾完成，已保存到：/data/out.png  
@@ -53,3 +56,4 @@ sudo docker run --rm -it \
   firefly0922/dcp-dehaze:r35.5.0-v1 \
   "/data/薄雾图.png" "/data/out.png" \
   --win 15 --omega 0.95 --t0 0.1 --gf_r 40 --gf_eps 1e-3
+'''
