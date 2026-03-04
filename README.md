@@ -17,25 +17,25 @@
 
 ### 1) 拉取项目代码（获取示例图片/脚本/说明）  
 
-'''bash
+```bash
 git clone https://github.com/FireFly0922/dcp-dehaze.git
 cd dcp-dehaze
-'''
+```
 
 ### 2）拉取Docker镜像  
 
-'''bash
+```bash
 sudo docker pull firefly0922/dcp-dehaze:latest
-'''
+```
 
 ### 3）运行去雾  
 
-'''bash
+```bash
 sudo docker run --rm -it \
   -v "$PWD":/data \
   firefly0922/dcp-dehaze:r35.5.0-v1 \
   "/data/薄雾图.png" "/data/out.png"
-'''
+```
 
 运行成功后，你会在当前目录得到 out.png，终端会输出类似：  
 去雾完成，已保存到：/data/out.png  
@@ -50,10 +50,10 @@ sudo docker run --rm -it \
 --gf_eps：导向滤波 eps（默认 1e-3）  
 
 调参方法（例）：  
-'''bash
+```bash
 sudo docker run --rm -it \
   -v "$PWD":/data \
   firefly0922/dcp-dehaze:r35.5.0-v1 \
   "/data/薄雾图.png" "/data/out.png" \
   --win 15 --omega 0.95 --t0 0.1 --gf_r 40 --gf_eps 1e-3
-'''
+```
