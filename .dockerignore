@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.jpg
+*.png
+output*.jpg
+.git/
+.vscode/
